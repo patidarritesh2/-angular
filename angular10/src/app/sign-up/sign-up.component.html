@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <style>.input-group-addon {
+        box-shadow: 9px 8px 7px #001a33;
+        
+    }
+    </style>
+
+</head>
+<body>
+    <table align="center">
+        <div class="card input-group-addon grad	">
+            <div class="card-body">
+           
+             
+              <h1>User Registration</h1>
+  <tr>
+    <th>First Name :</th>
+    <td> <input [(ngModel)]="firstname" type="text"  name ="firstname" placeholder="First Name"></td>
+  </tr>
+  <tr>
+    <th>Last Name :</th>
+    <td> <input [(ngModel)]="lastname" type="text" name ="lastname" placeholder="Last Name"></td>
+  </tr>
+  <tr>
+    <th>Mobile No :</th>
+    <td> <input  [(ngModel)]="mobileno" type="text" name ="mobileno" placeholder="Mobile No"></td>
+  </tr>
+  <tr>
+    <th>Dob :</th>
+    <td> <input [(ngModel)]="dob" type="date" placeholder="dob"></td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <button (click)="save()" class="btn btn-success">Save</button>
+                        
+    <tr *ngFor="let a of form.res">
+        <td>{{a.firstname}}</td>
+        <td>{{a.lastname}}</td>
+        <td>{{a.mobileno}}</td>
+     </tr>
+
+
+            </div>
+        </div>
+
+
+
+    </table>
+    
+</body>
+</html>
